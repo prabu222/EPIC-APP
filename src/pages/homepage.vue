@@ -55,8 +55,8 @@
 
 <div class="row">
     <div class="col-12 text-center">
-      <q-avatar>
-        <img src="statics/rizki.png">
+      <q-avatar size="200px">       
+        <img src="statics/prabu2.jpeg">
       </q-avatar>
       </div>
        <div style="padding-top: 20px" class="col-12 text-center row">
@@ -64,6 +64,8 @@
          <q-btn class="col-4 text-center" size="20px" color="primary" glossy label="about Prabu"  @click="aboutprabu= true" />
          <q-btn class="col-4 text-center" size="20px" color="amber" glossy label="Set Alarm"  @click="alarm= true"/>
          <q-btn class="col-4 text-center" size="20px" color="primary" glossy label="video" @click="videoclick"  />
+         <q-btn class="col-4 text-center" size="20px" color="amber" glossy label="Pictures" @click="photoclick"  />
+         <q-btn class="col-4 text-center" size="20px" color="primary" glossy label="More videos" @click="morevideoclick"  />
          </div>
       </div>
  
@@ -81,6 +83,8 @@ export default {
         alarm: false,
        alert: false,
        video: false,
+       more: false,
+       photo: false,
       date: '2019/02/01',
       aboutprabu: false,
       lorem: 'Hello im Prabu Im a archer, youtuber, and student. I like to play Fortnite and Minecraft, and I like to eat salmon sashimi. My hobby is to do archery.'
@@ -93,8 +97,13 @@ export default {
 
        methods: {
 
+     photoclick () {
+            this.$router.push("/photo")
+    },
 
-
+    morevideoclick () {
+            this.$router.push("/more")
+    },
 
     videoclick () {
             this.$router.push("/videos")

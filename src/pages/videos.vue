@@ -1,7 +1,13 @@
 <template>
   <q-page class="flex flex-center">
+    <q-spinner-cube 
+    v-if="isloading"
+    class="fixed-center"
+        color="orange"
+        size="5.5em"
+      />
 
-<div class="q-pa-md q-gutter-sm">
+<div class="q-pa-md q-gutter-sm"  v-if="!isloading">
     <q-carousel
       animated
       v-model="slide"
@@ -57,17 +63,27 @@ export default {
 
    data () {
     return {
-      slide: 'Rihanna'
+      slide: 'Rihanna',
+      isloading: true
     }
   },
   components: {
       login 
   },
+   mounted(){
+    this.loading()
+  },
   methods:  {
 
         linkclick () {
             this.$router.push("/login")
-        }
+        },
+        loading () {
+            setTimeout(()=>{
+            this.isloading=false
+        },5000);
+
   }
+}
 }
 </script>
