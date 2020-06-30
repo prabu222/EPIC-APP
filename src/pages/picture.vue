@@ -1,8 +1,19 @@
 <template>
+
+    
   <div class="q-pa-md">
+    <q-spinner-cube 
+    v-if="isloading"
+    class="fixed-center"
+        color="orange"
+        size="5.5em"
+      />
+
+    
       
     <q-carousel
       animated
+      v-if="!isloading"
       v-model="slide"
       navigation
       infinite
@@ -23,8 +34,29 @@
 export default {
   data () {
     return {
-      slide: 1
+      slide: 1,
+      isloading : true
     }
+  },
+
+   mounted(){
+    this.loading()
+  },
+  methods:  {
+
+        
+        loading () {
+            setTimeout(()=>{
+            this.isloading=false
+        },5000);
+
+        
+        }
+        
   }
-}
+      
+    }
+  
+
+
 </script>
