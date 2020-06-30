@@ -42,7 +42,7 @@
 
         <q-card-section class="q-pt-none">
          <q-time
-      v-model="time"
+      v-model="currentTime"
       format24h
     />
         </q-card-section>
@@ -79,7 +79,7 @@ import login from '../components/form'
 export default {
    data () {
     return {
-        time: '19:42',
+        time: new Date(),
         alarm: false,
        alert: false,
        video: false,
