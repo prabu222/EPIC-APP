@@ -9,7 +9,8 @@ const routes = [
     { path: '/homepage', component: () => import('pages/homepage.vue') },
     { path: '/videos', component: () => import('pages/videos.vue') },
     { path: '/more', component: () => import('pages/morevideos.vue') },
-    { path: '/photo', component: () => import('pages/picture.vue') }
+    { path: '/photo', component: () => import('pages/picture.vue') },
+    { path: '/alarm', component: () => import('pages/alarm.vue') }
     
 
 

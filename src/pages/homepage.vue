@@ -62,7 +62,7 @@
        <div style="padding-top: 20px" class="col-12 text-center row">
          <q-btn class="col-4 text-center" size="20px" color="amber" glossy label="Calendar" @click="alert= true"  />
          <q-btn class="col-4 text-center" size="20px" color="primary" glossy label="about Prabu"  @click="aboutprabu= true" />
-         <q-btn class="col-4 text-center" size="20px" color="amber" glossy label="Set Alarm"  @click="alarm= true"/>
+         <q-btn class="col-4 text-center" size="20px" color="amber" glossy label="Set Alarm"  @click="alarmclick"/>
          <q-btn class="col-4 text-center" size="20px" color="primary" glossy label="video" @click="videoclick"  />
          <q-btn class="col-4 text-center" size="20px" color="amber" glossy label="Pictures" @click="photoclick"  />
          <q-btn class="col-4 text-center" size="20px" color="primary" glossy label="More videos" @click="morevideoclick"  />
@@ -107,12 +107,15 @@ export default {
 
     videoclick () {
             this.$router.push("/videos")
+            
         },
+    alarmclick () {
+            this.$router.push("/alarm")
       
       }
+       }
 }
 
-    
 
 </script>
 
